@@ -1,0 +1,30 @@
+// Button
+@mixin button($borderRadius) {
+  border-radius: $borderRadius;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  max-width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  touch-action: manipulation;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+
+  &:active {
+    outline: 0;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: default;
+  }
+}
