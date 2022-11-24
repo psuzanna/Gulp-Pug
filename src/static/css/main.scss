@@ -1,2 +1,98 @@
 @import "import/reset";
 @import "import/fonts";
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 120%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 80px;
+  background-color: black;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__cart {
+      position: relative;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: url(img/basket.webp) center/cover no-repeat;
+      &_count {
+        position: absolute;
+        color: black;
+        background: #FCB500;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        bottom: 0;
+        right: 0;
+      }
+  }
+
+}
+
+.main-menu {
+  display: flex;
+  gap: 40px;
+
+  &__link {
+    &:hover {
+      color: #FCB500;
+    }
+  }
+}
+
+.main-banner {
+  background: url(img/banner.webp) center/cover no-repeat;
+  padding: 96px 0 200px;
+
+  &__title {
+    color: white;
+    font-size: 8rem;
+    line-height: 120%;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  &__txt1 {
+    font-size: 1.4rem;
+    margin-bottom: 120px;
+  }
+  &__txt2 {
+    margin-top: 16px;
+    color: black;
+  }
+}
